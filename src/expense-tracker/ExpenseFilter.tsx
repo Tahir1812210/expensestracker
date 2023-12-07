@@ -1,15 +1,16 @@
 import React from 'react';
-
 import categories from '../components/categories';
 
 interface Props {
+  selectedCategory: string; // Add selectedCategory as a prop
   onSelectCategory: (category: string) => void;
 }
 
-const ExpenseFilter = ({ onSelectCategory }: Props) => {
+const ExpenseFilter = ({ selectedCategory, onSelectCategory }: Props) => {
   return (
     <select
       className="form-select"
+      value={selectedCategory}
       onChange={(event) => onSelectCategory(event.target.value)}
     >
       <option value="">All categories</option>

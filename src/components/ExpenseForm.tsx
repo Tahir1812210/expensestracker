@@ -1,11 +1,9 @@
+// ExpenseForm.tsx
+import React from 'react';
 import { z } from 'zod';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import categories from './categories';
-
-interface Props {
-  onSubmit: (data: ExpenseFormData) => void;
-}
 
 const schema = z.object({
   description: z
@@ -86,7 +84,9 @@ const ExpenseForm = ({ onSubmit }: Props) => {
           <p className="text-danger">{errors.category.message}</p>
         )}
       </div>
-      <button className="btn btn-primary">Submit</button>
+      <button type="submit" className="btn btn-primary">
+        Submit
+      </button>
     </form>
   );
 };
