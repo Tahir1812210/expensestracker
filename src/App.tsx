@@ -1,6 +1,6 @@
 // App.tsx
 import React, { useState } from 'react';
-import ExpenseForm from './components/ExpenseForm';
+import ExpenseForm from './expense-tracker/components/ExpenseForm';
 import ExpenseList from './expense-tracker/components/ExpenseList';
 import ExpenseFilter from './expense-tracker/ExpenseFilter';
 

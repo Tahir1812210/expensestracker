@@ -3,7 +3,7 @@ import React from 'react';
 import { z } from 'zod';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import categories from './categories';
+import categories from '../categories';
 
 const schema = z.object({
   description: z
